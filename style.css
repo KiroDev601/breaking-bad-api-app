@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+    
+}
+
+header {
+    width: 100vw;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first {
+    display: flex;
+    margin: 20px 0;
+}
+
+.first div {
+    position: relative;
+    border: 1px solid white;
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+    box-shadow:inset 0px 2px 2px rgba(50,50,50,.6); 
+    color: white; 
+}
+
+.first div h4 {
+    font-size: 4rem;
+}
+
+.first div span {
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+
+.first h4 {
+    font-size: 4rem;
+}
+
+.second {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.second div {
+    position: relative;
+    border: 1px solid white;
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+    box-shadow:inset 0px 2px 2px rgba(50,50,50,.6); 
+    color: white; 
+}
+
+.second div h4 {
+    font-size: 4rem;
+}
+
+.second div span {
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+
+.second h4 {
+    font-size: 4rem;
+}
+
+.search-form {
+    margin-top: 30px;
+    width: inherit
+}
+
+.search-form input {
+    width: 250px;
+    padding: 10px;
+}
+
+.search-form input:focus {
+    outline: none;
+}
+
+.search-form button {
+    padding: 11px;
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+    border: 1px solid rgb(104, 104, 104);
+    margin: 0 10px;
+}
+
+.search-form button:hover {
+    border: none;
+    background: linear-gradient(130deg, #46a08c 0%, #1C3F1D 100%, #303030 90%);
+    color: white;
+}
+
+.search-form button:focus {
+    outline: none;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+    margin: 20px 0;
+}
+
+#avatar {
+    width: inherit;
+    height: inherit;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 370px;
+    border: none;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-back {
+    background-color: rgba(255, 255, 255, 1); 
+    color: black;
+    transform: rotateY(180deg);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.flip-card-back h2 {
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(195, 191, 191);
+}
+
+.flip-card-back p {
+    margin-bottom: 20px;
+}
+
+.occupation, .appearance, .status, .birthday {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.occupation span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.occupation p, .appearance p, .status p, .birthday p {
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+
+.appearance span, 
+.status span,
+.birthday span
+ {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.more {
+    padding: 15px;
+    width: 100px;
+    margin: 2rem 0;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+
+.more:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Media queries */
+
+@media(max-width: 1024px) {
+    .flip-card {
+        width: 270px;
+    }
+
+    .occupation, .appearance, .status, .birthday {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .occupation span, 
+    .birthday span,
+    .appearance span,
+    .status span {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 1000px) {
+    .flip-card {
+        width: 250px;
+    }
+}
+
+@media(max-width: 900px) {
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+        margin: 20px 0;
+    }
+
+    .occupation p, 
+    .birthday p,
+    .appearance p,
+    .status p {
+        font-size: 11px;
+    }
+
+
+}
+
+@media(max-width: 600px) {
+    .main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+        margin: 20px 0;
+    }
+}
+
+@media(max-width: 350px) {
+    .search-form input {
+        width: 180px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .first {
+        margin: 10px 0;
+    }
+
+    .first div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .first div h4 {
+        font-size: 3rem;
+    }
+
+    .first h4 {
+        font-size: 3rem;
+    }
+
+    .second div {
+        width: 70px;
+        height: 70px;
+    }
+
+    .second div h4 {
+        font-size: 3rem;
+    }
+
+    .second h4 {
+        font-size: 3rem;
+    }
+
+    .second {
+        margin: 10px 0;
+    }
+}
